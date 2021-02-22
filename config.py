@@ -4,7 +4,7 @@ from redis import StrictRedis
 
 class Config:
     # database
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:123456@127.0.0.1:3306/testDB"
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:123456@127.0.0.1:3306/newsdb"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # secret_key
@@ -21,10 +21,9 @@ class Config:
     PERMANENT_SESSION_LIFETIME = timedelta(seconds=5)
 
     # log mode
-    LEVEL_NAME = None
+    LEVEL_NAME = logging.DEBUG
 
 class DevelopConfig(Config):
-    LEVEL_NAME = logging.DEBUG
     pass
 
 class ProductConfig(Config):

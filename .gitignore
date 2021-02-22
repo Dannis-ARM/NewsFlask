@@ -13,6 +13,7 @@ build:
 
 #test
 test
+migrations/
 
 #log
 logs/log*
